@@ -196,7 +196,7 @@ jobs:
           at: .
       - run:
           name: Install AWS CLI
-          command: sudo pip3 install awscli --upgrade
+          command: pip install awscli --upgrade
       - run:
           name: Configure AWS Credentials
           command: |
