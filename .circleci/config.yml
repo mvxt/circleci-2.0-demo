@@ -21,7 +21,6 @@ workflows:
           type: approval
           requires:
             - test-parallel 
-            - parameterized-command 
           filters:
             branches:
               only: master
