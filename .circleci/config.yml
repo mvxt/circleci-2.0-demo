@@ -165,7 +165,7 @@ jobs:
           docker_layer_caching: true
       - run:
           name: Install AWS CLI
-          command: sudo pip install awscli --upgrade
+          command: pip install awscli --upgrade
       - run:
           name: Configure AWS Credentials and Login
           command: |
