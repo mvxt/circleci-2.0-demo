@@ -180,7 +180,7 @@ jobs:
             aws configure set region $AWS_REGION --profile default
       - run:
           name: Build the Docker image, tag it
-          command: docker build -t ${AWS_ECR_REPO_NAME} -t ${AWS_ECR_REPO_NAME}:${CIRCLE_SHA1} .
+          command: docker build -t ${AWS_ECR_ACCOUNT_URL}/${AWS_ECR_REPO_NAME} -t ${AWS_ECR_ACCOUNT_URL}/${AWS_ECR_REPO_NAME}:${CIRCLE_SHA1} .
       - run:
           name: Login and push image(s) to ECR
           command: |
